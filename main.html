@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Основи FE-технологій</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      text-align: center;
+      padding: 30px;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #953084;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      gap: 20px; 
+    }
+
+    .lab-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      background-color: #b700ff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 250px;
+      text-align: center;
+    }
+
+    .lab-button:hover {
+      background-color: #6e0a8a;
+      transform: translateY(-2px);
+    }
+
+    .lab-button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Основи FE-технологій</h1>
+  </header>
+
+  <main class="container">
+    <a href="lab1.html" class="lab-button">Лабораторна робота №1</a>
+    <a href="lab2.html" class="lab-button">Лабораторна робота №2</a>
+    <a href="lab3.html" class="lab-button">Лабораторна робота №3</a>
+  </main>
+</body>
+</html>

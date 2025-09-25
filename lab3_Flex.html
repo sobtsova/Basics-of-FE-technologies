@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочна верстка з Flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .block {
+            padding: 10px;
+            border: 2px solid #333;
+        }
+
+        .first-row {
+            display: flex;
+            margin-bottom: 0;
+        }
+
+        .image-block {
+            flex: 0 0 25%;
+            background-color: #4CAF50;
+            color: white;
+            height: 600px;
+            padding: 0;
+            display: flex;
+        }
+
+        .text-block {
+            flex: 0 0 75%;
+            background-color: #2196F3;
+            color: white;
+            height: 600px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .full-image-block {
+            width: 100%;
+            background-color: #FF9800;
+            color: white;
+            height: 200px;
+            margin-bottom: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .full-text-block {
+            width: 100%;
+            background-color: #f8e12e;
+            color: rgb(0, 0, 0);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .block-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .full-block-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            font-size: 30px;
+            text-align: center;
+            color: azure;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .text-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ІП-34 Собцова Софія. Лабораторна робота №2, Варіант 4</h1>
+
+    <nav class="nav">
+        <a href="lab3.html" class="nav-link">Перейти до Float версії</a>
+        <a href="#" class="nav-link">Поточна сторінка (Flex)</a>
+    </nav>
+
+    <div class="container">
+        <div class="first-row">
+            <div class="block image-block">
+                <img src="cat.jpg" alt="Бенгальський кіт" class="block-image">
+            </div>
+            
+            <div class="block text-block">
+                <div class="text-content">
+                    <h2>Бенгальський кіт</h2>
+                    <p>Бенгальська кішка - це унікальна порода, яка поєднує в собі вигляд дикого леопарда та лагідний характер домашнього улюбленця. Ця порода виведена шляхом схрещування дикої бенгальської кішки з домашніми породами.</p>
+                    <p>Бенгали мають вражаючу плямисту або мармурову шерсть з характерним "леопардовим" малюнком. Їхня шерсть блискуча та м'яка на дотик. Тіло мускулисте та сильне, очі великі та виразні, зазвичай зеленого або золотистого кольору.</p>
+                    <p>Це дуже активні, цікаві та розумні тварини. Вони люблять грати, стрибати та досліджувати навколишній простір. Бенгальські коти добре ладнають з дітьми та іншими тваринами, але потребують багато уваги та ігор.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block full-image-block">
+            <img src="cat1.jpg" alt="Британський кіт" class="full-block-image">
+        </div>
+
+        <div class="block full-text-block">
+            <div class="text-content">
+                <h2>Британський кіт</h2>
+                <p>Британська короткошерста кішка - одна з найпопулярніших порід у світі, відома своїм плюшевим хутром, круглою мордочкою та спокійним характером. Ці коти мають благородний вигляд та міцну статуру.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Верстка з використанням Flexbox</p>
+    </footer>
+</body>
+</html>

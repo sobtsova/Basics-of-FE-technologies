@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Лабораторна робота №2 — Варіант 4</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="lab2_style.css">
+  <style>
+    :root{
+      --color-row1: #048f8f;
+      --color-row2: #f5f504;
+      --text-dark: #0a0afb;
+      --text-light: #fb7070;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    table {
+      height: 210px;
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    tr {
+      height: 33.33%;
+      }
+
+    td {
+      border: 1px solid #333;
+      padding: 12px 8px;
+      text-align: center;
+      vertical-align: middle;
+      word-wrap: break-word;
+    }
+
+    tr:first-child td {
+      background-color: var(--color-row1);
+      color: var(--text-light);
+      font-weight: 700;
+    }
+
+    tr:nth-child(2) td {
+      background-color: var(--color-row2);
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    tr:first-child:hover td {
+      background-color: var(--color-row2);
+      color: var(--text-dark);
+    }
+
+    tr:nth-child(2):hover td {
+      background-color: var(--color-row1);
+      color: var(--text-light);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <table aria-label="Лабораторна робота">
+    <colgroup>
+      <col><col><col><col><col><col><col><col>
+    </colgroup>
+
+    <tr>
+      <td>Собцова</td>
+      <td>Софія</td>
+      <td colspan="2" rowspan="2"></td>
+      <td colspan="2">Олександрівна</td>
+      <td colspan="2" rowspan="2">Варіант 4</td>
+    </tr>
+
+    <tr>
+      <td colspan="2">Група ІП-34</td>
+      <td colspan="2">Лабораторна робота №2</td>  
+    </tr>
+
+    <tr>
+      <td colspan="2"></td>
+      <td colspan="6"></td>
+    </tr>
+  </table>
+  
+  <div class="targets-wrapper">
+    <div class="target transform-target">
+        <div class="circle outer"></div>
+        <div class="circle inner"></div>
+        <div class="cross">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="target position-target"> 
+        <div class="circle outer"></div>
+        <div class="circle inner"></div>
+        <div class="cross">
+          <div class="line horizontal"></div>
+          <div class="line vertical"></div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
