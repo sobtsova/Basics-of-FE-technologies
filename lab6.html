@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Random User API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #042464;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px 0;
+      background-color: #8bc1ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fcc;
+    }
+    #users {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    }
+
+.user-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  #users {
+    justify-content: center;
+  }
+  .user-card {
+    min-width: calc(25% - 15px);
+  }
+}
+
+    .user-card img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    #status {
+      font-weight: bold;
+      margin-top: 10px;
+      color: rgb(95, 217, 95);
+    }
+  </style>
+</head>
+<body>
+
+  <button id="loadUsers">Завантажити користувачів</button>
+  <div id="status"></div>
+  <div id="users"></div>
+
+  <script src="lab6_script.js"></script>
+</body>
+</html>

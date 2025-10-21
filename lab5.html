@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Форма з перевіркою</title>
+<link rel="stylesheet" href="lab5_style.css">
+</head>
+<body>
+
+<h2>Форма для заповнення</h2>
+
+<form id="myForm">
+  <label>
+    ПІБ:
+    <input type="text" id="name" placeholder="ТТТТТ Т.Т.">
+  </label>
+  
+  <label>
+    ID-card:
+    <input type="text" id="idCard" placeholder="ТТ №ЧЧЧЧЧЧ">
+  </label>
+  
+  <label>
+    Факультет:
+    <input type="text" id="faculty" placeholder="ТТТТ">
+  </label>
+  
+  <label>
+    Дата народження:
+    <input type="text" id="birthDate" placeholder="ЧЧ.ЧЧ.ЧЧЧЧ">
+  </label>
+  
+  <label>
+    Адреса:
+    <input type="text" id="address" placeholder="м. ТТТТТТ">
+  </label>
+  
+  <button type="submit">Відправити</button>
+</form>
+
+<div class="color-picker-container">
+    <label for="colorPicker">Виберіть колір:</label>
+    <input type="color" id="colorPicker" value="#ff0000">
+</div>
+
+<table id="myTable"></table>
+
+<script src="lab5_script.js"></script>
+
+</body>
+</html>
