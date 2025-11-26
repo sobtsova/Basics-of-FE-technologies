@@ -40,7 +40,6 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
       Дата народж.: ${birthDate.value}\n
       Адреса: ${address.value}
     `;
-    // Вивід у новому вікні
     const newWin = window.open('', 'Result', 'width=400,height=300');
     newWin.document.write(`<pre>${output}</pre>`);
   } else {

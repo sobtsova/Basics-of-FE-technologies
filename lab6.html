@@ -13,6 +13,7 @@
       justify-content: flex-start;
       padding: 20px;
     }
+
     button {
       padding: 10px 20px;
       margin: 5px 0;
@@ -22,9 +23,11 @@
       border-radius: 8px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #005fcc;
     }
+
     #users {
     display: flex;
     flex-direction: row;
@@ -38,29 +41,30 @@
     box-sizing: border-box;
     }
 
-.user-card {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  text-align: center;
-  min-width: 180px;
-  flex-shrink: 0;
-}
+    .user-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+      min-width: 180px;
+      flex-shrink: 0;
+    }
 
-@media (max-width: 800px) {
-  #users {
-    justify-content: center;
-  }
-  .user-card {
-    min-width: calc(25% - 15px);
-  }
-}
+    @media (max-width: 800px) {
+      #users {
+        justify-content: center;
+      }
+      .user-card {
+        min-width: calc(25% - 15px);
+      }
+    }
 
     .user-card img {
       border-radius: 50%;
       margin-bottom: 10px;
     }
+    
     #status {
       font-weight: bold;
       margin-top: 10px;

@@ -32,7 +32,6 @@ async function getUsers() {
       usersContainer.appendChild(card);
     });
 
-    // Після успішного завантаження:
     status.textContent = '✅ Успішне завантаження';
 
   } catch (error) {

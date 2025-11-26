@@ -15,7 +15,7 @@ body::before {
 
 form {
     display: block;
-    margin: 0 auto; /* по горизонталі */
+    margin: 0 auto;
     background-color: #fff;
     padding: 20px 30px;
     border-radius: 10px;
@@ -63,9 +63,9 @@ h2 {
 
 .color-picker-container {
     display: flex;
-    flex-direction: column; /* підпис над полем */
-    align-items: center;    /* горизонтальне центрування */
-    margin-top: 20px;       /* відступ зверху */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 #colorPicker {
