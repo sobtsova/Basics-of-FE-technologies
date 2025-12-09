@@ -31,7 +31,7 @@ function Image() {
             <div className="image-container">
                 <a href="https://www.schwerte.de/">
                     <img 
-                        src="/schwerte.jpg" 
+                        src="schwerte.jpg" 
                         alt="Шверте Оригінал" 
                         style={{ width: '500px' }} 
                     />
@@ -49,7 +49,7 @@ function Image() {
             }}>
                 {isCloneVisible && (
                     <img 
-                        src="/schwerte.jpg" 
+                        src="schwerte.jpg" 
                         alt="Шверте Копія" 
                         style={{ 
                             width: '100%', 
