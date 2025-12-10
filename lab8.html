@@ -157,25 +157,30 @@
     <section class="testimonial">
         <div class="container testimonial-container relative-container">
             
-            <div class="arrow-side arrow-left">
+            <div class="arrow-side arrow-left" id="prevBtn">
                 <div class="minimal-arrow">&larr;</div>
             </div>
 
             <div class="avatar-container">
-                <img src="adam.jpg" alt="Adam">
+                <img src="adam.jpg" alt="Person" id="slider-img">
             </div>
-            <blockquote class="quote-text">
+            
+            <blockquote class="quote-text" id="slider-quote">
                 “There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
             </blockquote>
+            
             <div class="author-details">
-                <strong>Adam Anderson</strong>
-                <span>Head of business development @ Colorlib</span>
+                <strong id="slider-name">Adam Anderson</strong>
+                <span id="slider-role">Head of business development @ Colorlib</span>
             </div>
+            
             <div class="dots-nav">
-                <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+                <span class="dot active" onclick="setSlide(0)"></span>
+                <span class="dot" onclick="setSlide(1)"></span>
+                <span class="dot" onclick="setSlide(2)"></span>
             </div>
 
-            <div class="arrow-side arrow-right">
+            <div class="arrow-side arrow-right" id="nextBtn">
                 <div class="minimal-arrow">&rarr;</div>
             </div>
 
@@ -228,5 +233,6 @@
         </div>
     </section>
 
+    <script src="lab8.js"></script>
 </body>
 </html>

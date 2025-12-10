@@ -456,14 +456,6 @@ img {
     z-index: 10;
 }
 
-.arrow-left {
-    left: -220px;
-}
-
-.arrow-right {
-    right: -220px;
-}
-
 .minimal-arrow {
     display: flex;
     justify-content: center;
@@ -492,6 +484,14 @@ img {
 .minimal-arrow:hover {
     color: var(--primary-color);
     transform: scale(1.1);
+}
+
+.arrow-left {
+    left: -100px;
+}
+
+.arrow-right {
+    right: -100px;
 }
 
 .avatar-container {
@@ -542,6 +542,10 @@ img {
 
 .dot.active {
     background-color: var(--primary-color);
+}
+
+#slider-img, #slider-quote, #slider-name, #slider-role {
+    transition: opacity 0.3s ease-in-out;
 }
 
 .blog {
@@ -633,7 +637,9 @@ img {
         width: auto;        
     }
 
-    .hero-bg-shape { display: none; }
+    .hero-bg-shape { 
+        display: none; 
+    }
 
     .hero-content .btn {
         display: inline-block;
@@ -648,11 +654,16 @@ img {
     }
 
     .hero-quote {
-        width: 100%;
+        position: relative; 
+        width: 100%; 
+        max-width: 100%; 
+        
         left: 0;
-        bottom: auto;
-        margin-top: 20px;
-        position: relative;
+        bottom: 0;
+        margin-top: 0; 
+        
+        padding: 30px 20px; 
+        box-sizing: border-box;
     }
 
     .services-container {
@@ -780,6 +791,44 @@ img {
     .blog-grid {
         grid-template-columns: 1fr;
     }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        top: 70px; 
+        background-color: var(--white);
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-shadow: 0 15px 15px rgba(0,0,0,0.1); 
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav-links.nav-active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        opacity: 1;
+        margin: 15px 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        color: var(--dark-bg);
+    }
+
+    .burger.toggle div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger.toggle div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.toggle div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
 
 @media (max-width: 576px) {
@@ -790,7 +839,6 @@ img {
     .hero-content h1 { 
         font-size: 2rem; 
     }
-
     .arrow-side {
         display: none;
     }
